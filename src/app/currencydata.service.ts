@@ -10,8 +10,8 @@ export class CurrencydataService {
 
   constructor(private _http: HttpClient) { }
 
-  _url = 'https://finance-microapi.herokuapp.com/v1/list_currencies/'
-  conv_url = 'https://finance-microapi.herokuapp.com/v1/convert_currency/'
+  _url = 'https://finance.microapi.dev/v1/list_currencies/'
+  conv_url = 'https://finance.microapi.dev/v1/convert_currency/'
 
   public httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
