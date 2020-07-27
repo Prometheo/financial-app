@@ -37,8 +37,7 @@ export class AppComponent implements OnInit {
     console.log(this.currencyDetailsModel);
     this._currencyService.getCurrencies().subscribe(
       data => {
-        data = data['data']['results'];
-        this.currencies = Object.values(data);
+        this.currencies = [...data]
         console.log(this.currencies)
       },
       error => {

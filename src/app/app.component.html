@@ -17,7 +17,7 @@
               <mat-form-field appearance="fill">
                   <mat-label>Select a Currency</mat-label>
                   <mat-select #BaseCurrency=ngModel name="BaseCurrency" [(ngModel)]="currencyDetailsModel.from_currency" >
-                  <mat-option *ngFor="let currency of currencies"  value="{{ currency.id}}" > {{ currency.currencyName }}</mat-option>
+                  <mat-option *ngFor="let currency of currencies"  value="{{ currency.currency_id}}" > {{ currency.currency_name}}-{{currency.country_name }}</mat-option>
                   </mat-select>
                   <mat-hint>select a currecy to convert from</mat-hint>
                 </mat-form-field>
@@ -42,7 +42,7 @@
                   <mat-form-field appearance="fill">
                       <mat-label>Select a currency</mat-label>
                       <mat-select #pairCurrency=ngModel name="pairCurrency" [(ngModel)]="currencyDetailsModel.to_currency">
-                        <mat-option *ngFor="let currency of currencies"  value="{{ currency.id}}" > {{ currency.currencyName }}-{{ currency.currencySymbol }} </mat-option>
+                        <mat-option *ngFor="let currency of currencies"  value="{{ currency.currency_id}}" > {{ currency.currency_name }}-{{ currency.currency_symbol }} </mat-option>
                       </mat-select>
                       <mat-hint>select the currecy to convert to</mat-hint>
                     </mat-form-field>
